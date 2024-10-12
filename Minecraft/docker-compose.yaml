@@ -1,0 +1,26 @@
+services:
+  bedrock:
+    image: debian:bullseye-slim
+    init: true
+    labels:
+      - "com.robbeloth.family.description=Set up Minecraft Bedrock server"
+      - "com.robbeloth.family.version=1.0"
+    hostname: osr_bedrock
+    container_name: bedrock-container
+    environment:
+      LD_LIBRARY_PATH: . ./bedrock_server
+    ports:
+      - 19132:19132/udp
+    volumes:
+      - "./data:/data"
+    stdin_open: true
+    command: >
+      sh -c "mkdir bedrock &&
+             cd bedrock &&
+             apt-get update &&
+             apt-get install -y wget &&
+             apt-get install -y unzip &&
+             apt-get install -y libcurl4 &&
+             wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.0.01.zip &&
+             unzip bedrock-server*.zip &&
+             LD_LIBRARY_PATH=. ./bedrock_server"
