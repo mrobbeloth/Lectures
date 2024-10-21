@@ -16,7 +16,7 @@ services:
     stdin_open: true                                                               # Keep STDIN open even if not attached
     tty: true                                                                      # Allocate a pseudo-TTY
     command: >
-      sh -c "mkdir bedrock &&
+      sh -c "mkdir -p bedrock &&
              cd bedrock &&
              apt-get update &&
              apt-get install -y wget &&
