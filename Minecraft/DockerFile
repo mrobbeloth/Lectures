@@ -5,6 +5,7 @@
 # Note: Alpine default shell is sh with busybox
 # Revision history
 # 1.1 -- switch to 1.21 server, add lsof, fix ports
+# 1.2 -- swtich to 1.21.3 server
 
 #Using a lean distribution given limited resources
 FROM alpine:latest AS MinecraftServer
@@ -19,10 +20,10 @@ RUN apk add openjdk21-jdk
 RUN java -version
 
 #Add support packages
+# Note: no udev package, so docker logs will show udev warning
 RUN apk add openssh
 RUN apk add tcpdump
 RUN apk add lsof
-RUN apk add udev-dev
 
 #Get the Minecraft JAR
 RUN apk add wget
