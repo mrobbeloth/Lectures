@@ -22,7 +22,7 @@ RUN java -version
 RUN apk add openssh
 RUN apk add tcpdump
 RUN apk add lsof
-#RUN apk add udev-dev
+RUN apk add udev-dev
 
 #Get the Minecraft JAR
 RUN apk add wget
