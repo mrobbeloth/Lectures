@@ -44,4 +44,4 @@ RUN sed -i 's/eula=false/eula=true/g' eula.txt
 RUN sed -i 's/enable-rcon=false/enable-rcon=true/g' server.properties
 RUN sed -i '/rcon.password/d' server.properties
 RUN sed -i '$i rcon.password=iwillchangeitlater' server.properties
-ENTRYPOINT java -Xmx6G -Xms6G -XX:SoftMaxHeapSize=1G -jar minecraft_server.jar --nogui --bonusChest
+ENTRYPOINT ["java", "-Xmx6G", "-Xms6G", "-XX:SoftMaxHeapSize=1G", "-jar", "minecraft_server.jar", "--nogui", "--bonusChest"]
