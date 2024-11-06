@@ -27,8 +27,8 @@ RUN apk add udev-dev
 #Get the Minecraft JAR
 RUN apk add wget
 # 1.19 version RUN wget https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar
-# Latest version is 1.21, need to match client and server
-RUN wget https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa98dc05c/server.jar
+# Latest version is 1.21.3, need to match client and server
+RUN wget https://piston-data.mojang.com/v1/objects/45810d238246d90e811d896f87b14695b7fb6839/server.jar
 RUN mv server.jar minecraft_server.jar
 RUN java -jar minecraft_server.jar --nogui
 RUN ls -lA
