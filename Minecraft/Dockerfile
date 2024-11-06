@@ -8,7 +8,7 @@
 # 1.2 -- switch to 1.21.3 server
 
 #Using a lean distribution given limited resources
-FROM alpine:latest AS MinecraftServer
+FROM alpine:latest AS minecraftserver
 
 #Who designed this wonderful creation, what will we do
 LABEL maintainer="michael@robbeloth.com"
