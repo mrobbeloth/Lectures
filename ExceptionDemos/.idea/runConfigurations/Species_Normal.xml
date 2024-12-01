@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Species Normal" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Species" />
+    <module name="ExceptionDemos" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

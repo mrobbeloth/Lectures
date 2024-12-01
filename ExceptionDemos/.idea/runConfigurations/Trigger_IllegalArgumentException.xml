@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Trigger IllegalArgumentException" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="ArrayListUnCheckedExamples" />
+    <module name="ExceptionDemos" />
+    <option name="PROGRAM_PARAMETERS" value="-100" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

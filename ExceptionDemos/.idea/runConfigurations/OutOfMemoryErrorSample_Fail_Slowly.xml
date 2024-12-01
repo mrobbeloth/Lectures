@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="OutOfMemoryErrorSample Fail Slowly" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="OutofMemoryErrorSample" />
+    <module name="ExceptionDemos" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

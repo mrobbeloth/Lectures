@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="AssertionErrorTest" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="AssertionErrorTest" />
+    <module name="ExceptionDemos" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

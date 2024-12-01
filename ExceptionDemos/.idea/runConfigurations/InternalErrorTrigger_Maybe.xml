@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="InternalErrorTrigger_Maybe" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="InternalErrorSample" />
+    <module name="ExceptionDemos" />
+    <option name="VM_PARAMETERS" value="-Xms3m -Xmx4m -Xnoclassgc -Xrs" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
