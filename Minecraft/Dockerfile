@@ -6,6 +6,7 @@
 # Revision history
 # 1.1 -- switch to 1.21 server, add lsof, fix ports
 # 1.2 -- switch to 1.21.3 server
+# 1.3 -- switch to 1.21.4 server
 
 #Using a lean distribution given limited resources
 FROM alpine:latest AS minecraftserver
@@ -29,7 +30,7 @@ RUN apk add lsof
 RUN apk add wget
 # 1.19 version RUN wget https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar
 # Latest version is 1.21.3, need to match client and server
-RUN wget https://piston-data.mojang.com/v1/objects/45810d238246d90e811d896f87b14695b7fb6839/server.jar
+RUN wget https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
 RUN mv server.jar minecraft_server.jar
 RUN java -jar minecraft_server.jar --nogui
 RUN ls -lA
