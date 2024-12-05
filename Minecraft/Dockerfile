@@ -29,7 +29,7 @@ RUN apk add lsof
 #Get the Minecraft JAR
 RUN apk add wget
 # 1.19 version RUN wget https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar
-# Latest version is 1.21.3, need to match client and server
+# Latest version is 1.21.4, need to match client and server
 RUN wget https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
 RUN mv server.jar minecraft_server.jar
 RUN java -jar minecraft_server.jar --nogui
