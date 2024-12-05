@@ -9,6 +9,7 @@ services:
     container_name: bedrock-container                                              # Do not use a random name
     environment:
       LD_LIBRARY_PATH: . ./bedrock_server
+      DEBIAN_FRONTEND: noninteractive                                               # Set the Debian frontend to noninteractive
     ports:
       - 19132:19132/udp                                                            # Expose the bedrock port for Minecraft
     volumes:
