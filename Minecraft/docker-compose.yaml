@@ -26,6 +26,6 @@ services:
              apt-get install -y libudev0 &&
              apt-get install -y libudev1 &&
              apt-get install -y iputils-ping &&
-             wget --report-speed=bits -U \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\" \"https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip" &&
+             wget --report-speed=bits -U \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\" \"https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip\" &&
              unzip bedrock-server*.zip &&
              LD_LIBRARY_PATH=. ./bedrock_server"
