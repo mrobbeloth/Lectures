@@ -3,6 +3,7 @@ Lectures in this repo:
 * ExceptionsDemo (try-catch, Exceptions in Java)
 * Recursion
 * Background Autobiography Lecture
+* Virtualization and Cloud Computing
 
 Lecture Repos not included here:
 * [Quicksort](https://github.com/mrobbeloth/quicksort_demo_project)
