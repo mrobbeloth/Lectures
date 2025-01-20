@@ -1,14 +1,9 @@
-/* Java Listing 11.2: Recursive method for displayAsWords
- * The method receives a non-negative integer as a parameter,
- * and prints its sequence of digits spelled out as words.
- * TO DO: complete the method for displayAsWords
- */
-
 import java.util.Scanner;
 
-public class DisplayDigitsAsWords {
+public class IterativeDemo
+{
     public static void main(String[] args) {
-         System.out.print("Enter an integer:");
+         System.out.println("Enter an integer:");
          Scanner keyboard = new Scanner(System.in);
          int number = keyboard.nextInt( );
          System.out.println("The digits in that number are:");
@@ -17,28 +12,34 @@ public class DisplayDigitsAsWords {
     }
 
     // Precondition: number >= 0
-    // Displays the sequence of digits in number as words.
+    // Displays the digits in number as words.
     public static void displayAsWords(int number) {
-        if (number < 10) {
-            // base case, no recursion here
-            String digitStr = getWordFromDigit(number);
-            System.out.print(digitStr + " ");
+        int divisor = getPowerOfTen(number);
+        int next = number;
+        while (divisor >= 10) {
+            System.out.print(getWordFromDigit(next / divisor) + " ");
+            next = next % divisor;
+            divisor = divisor / 10;
         }
-        else {
-            // make the problem smaller
-            displayAsWords(number / 10);
-
-            /* this line is frozen in "carbonite" (e.g. time)
-               until we return to this invocation */
-            System.out.print(getWordFromDigit(number % 10) + " ");
-        }
+        System.out.print(getWordFromDigit(next / divisor) + " ");
     }
-	
+
+    // Precondition: n >= 0. 
+    // Returns the greatest power of 10, which is less than or equal n.
+    private static int getPowerOfTen(int n) {
+        int result = 1;
+        while (n >= 10) {
+           result = result * 10;
+           n = n / 10;
+        }	
+        return result;
+    }
+
     // Precondition: 0 <= digit <= 9
-    // Returns the word for the argument digit. Helper method to base case
+    // Returns the word for the argument digit.
     private static String getWordFromDigit(int digit) {
         String result = null;
-        switch (digit) { // newer Java releases case 0 -> result = "zero"
+        switch (digit) {
             case 0: result = "zero";  break;
             case 1: result = "one";   break;
             case 2: result = "two";   break;
@@ -50,7 +51,7 @@ public class DisplayDigitsAsWords {
             case 8: result = "eight"; break;
             case 9: result = "nine";  break;
             default:
-                System.out.println("Fatal Error: invalid digit.");
+                System.out.println("Fatal Error.");
                 System.exit(0);
         }
         return result;
