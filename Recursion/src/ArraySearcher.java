@@ -5,6 +5,7 @@
  * to compare linear search and binary search.
  */
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -92,6 +93,9 @@ public class ArraySearcher {
             System.out.println("Found value at element " + resultLinear);
             System.out.println("Linear Search comparisons = " + finder.count);
             System.out.println("Linear Search Time: " + (end - start) + " ns ");
+            Duration duration = Duration.ofNanos(end - start);
+            long milliseconds = duration.toMillis();
+            System.out.println("Binary Search Time: " + milliseconds + "ms");
             
             start = System.nanoTime();
             int result = finder.find(target);
@@ -102,7 +106,10 @@ public class ArraySearcher {
                 System.out.println(target + " is at index " + result);
             System.out.println("Binary Search comparisons = " + finder.count);
             System.out.println("Binary Search Time: " + (end - start) + " ns ");
-            
+            duration = Duration.ofNanos(end - start);
+            milliseconds = duration.toMillis();
+            System.out.println("Binary Search Time: " + milliseconds + "ms");
+
             System.out.println("Search again? (yes or no)");
             ans = keyboard.next( );
         } while (ans.equalsIgnoreCase("yes"));

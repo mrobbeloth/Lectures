@@ -10,10 +10,12 @@ public class CountDownRecursive {
 
     private static void countDownToLaunch(int value) {
         if (value > 0) {
+            // problem reducing step w/ recursion
             System.out.print(value + ",");
             countDownToLaunch(--value); // why not value--?
         }
         else {
+            // base case, no recursion
             System.out.println("0");
         }
     }

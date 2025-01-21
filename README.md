@@ -1,7 +1,7 @@
 Lectures in this repo:
 * Learning DevOps through Minecraft
 * ExceptionsDemo (try-catch, Exceptions in Java)
-* Recursion
+* Recursion (appropriate topic for introductory CS courses, Java focus)
 * Background Autobiography Lecture
 * Virtualization and Cloud Computing
 
