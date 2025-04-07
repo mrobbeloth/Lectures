@@ -1,0 +1,10 @@
+@startuml
+AbstractQueue <-- CustomQueue
+class CustomQueue {
++size() : int
++offer(E : Element) : boolean
++poll(E : Element) : boolean
++peek(E: Element) : Element
++Iterator(E : Element) : Iterator
+}
+@enduml

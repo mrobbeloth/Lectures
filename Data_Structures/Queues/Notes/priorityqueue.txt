@@ -1,0 +1,9 @@
+@startuml
+java.util.Queue <|--java.util.PriorityQueue
+
+class java.util.PriorityQueue {
+	+PriorityQueue()
+	+PriorityQueue(initialCapacity : int)
+	+PriorityQueue(initialCapacity: int, comparator : Comparator<? super E>)
+}
+@enduml

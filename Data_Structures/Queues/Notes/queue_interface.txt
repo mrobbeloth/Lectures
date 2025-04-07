@@ -1,0 +1,14 @@
+@startuml
+java.util.Collection <|-- java.util.Queue
+java.lang.Iterable <|-- java.util.Queue
+interface java.util.Collection {}
+interface java.lang.Iterable {}
+interface java.util.Queue {
+	+add(element : E) : boolean
+	+offer(element: E) : boolean
+	+poll() : E
+	+remove() : E
+	+peek() : E
+	+element(): E
+}
+@enduml

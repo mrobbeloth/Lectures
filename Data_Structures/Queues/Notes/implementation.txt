@@ -1,0 +1,14 @@
+@startuml
+
+java.util.Collection <|-- java.util.List
+java.util.Collection <|-- java.util.Queue
+java.util.List <|-- java.util.LinkedList
+java.util.Deque <|-- java.util.LinkedList
+
+interface java.util.Collection
+interface java.util.List
+interface java.util.Queue
+interface java.util.Deque
+class java.util.LinkedList
+
+@enduml
