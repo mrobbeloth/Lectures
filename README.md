@@ -6,6 +6,7 @@ Lectures in this repo:
 * Virtualization and Cloud Computing
 * Software Engineering Lectures (Just User Requirements for now)
 * MVNU Summer Camp 2024 Programming Clinic Lectures (focus: infinity mirrors using WS2812b led strip)
+* Data Structures (Queues)
 
 Lecture Repos not included here:
 * [Quicksort](https://github.com/mrobbeloth/quicksort_demo_project)
