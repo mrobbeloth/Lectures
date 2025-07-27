@@ -35,10 +35,10 @@ RUN apk add openjdk21
 RUN java -version
 
 #Get the Minecraft JAR
-RUN apk add wget
 # 1.19 version RUN wget https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar
+# #RUN wget https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
 # Latest version is 1.21.4, need to match client and server
-RUN wget https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
+RUN wget https://piston-data.mojang.com/v1/objects/6bce4ef400e4efaa63a13d5e6f6b500be969ef81/server.jar
 RUN mv server.jar minecraft_server.jar
 RUN java -jar minecraft_server.jar --nogui
 RUN ls -lA
