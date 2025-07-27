@@ -7,24 +7,32 @@
 # 1.1 -- switch to 1.21 server, add lsof, fix ports
 # 1.2 -- switch to 1.21.3 server
 # 1.3 -- switch to 1.21.4 server
+# 1.4 -- fix alpline to 3.22
+#        enable community repo
+#        remove bedrock port added by mistake
 
 #Using a lean distribution given limited resources
-FROM alpine:latest AS minecraftserver
+FROM alpine:3.22 AS minecraftserver
 
 #Who designed this wonderful creation, what will we do
 LABEL maintainer="michael@robbeloth.com"
 RUN echo 'We Are Going to Deploy MineCraft Server'
 
-#Add Prerequsite packages
+#Prepare Package Manager
 RUN apk update
-RUN apk add openjdk21-jdk
-RUN java -version
+RUN apk add sed
+RUN sed -i '2s/^# *//' /etc/apk/repositories
+RUN cat /etc/apk/repositories
 
 #Add support packages
 # Note: no udev package, so docker logs will show udev warning
 RUN apk add openssh
 RUN apk add tcpdump
 RUN apk add lsof
+
+#Add Prerequisite Packages
+RUN apk add openjdk21
+RUN java -version
 
 #Get the Minecraft JAR
 RUN apk add wget
@@ -40,7 +48,6 @@ EXPOSE 25565/tcp
 EXPOSE 25575/tcp
 
 #Prepare to change EULA
-RUN apk add sed
 RUN sed -i 's/eula=false/eula=true/g' eula.txt
 RUN sed -i 's/enable-rcon=false/enable-rcon=true/g' server.properties
 RUN sed -i '/rcon.password/d' server.properties
